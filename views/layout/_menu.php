@@ -22,7 +22,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="?page=listarCursos">Listar</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Cadastrar</a></li>
+            <li><a class="dropdown-item" href="?page=formCadastrarCurso">Cadastrar</a></li>
           </ul>
         </li>
         <li class="nav-item">

@@ -13,14 +13,22 @@ $pagina = isset($_REQUEST['page']) ? $_REQUEST['page'] : 'home';
 
 switch ($pagina) {
 
-    case "home":
+    case "home" :
         HomeController::home();
         break;
 
-    case "listarCursos":
+    case "listarCursos" :
         //$curso = new CursoController();
         //$curso->listar();
         (new CursoController())->listar();
+        break;
+
+    case "formCadastrarCurso" :
+        (new CursoController())->formCadastrar();
+        break;
+
+    case "salvarCurso" :
+        (new CursoController())->salvarCurso($_POST);
         break;
 
     default:
