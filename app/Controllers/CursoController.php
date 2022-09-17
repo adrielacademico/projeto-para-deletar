@@ -2,10 +2,15 @@
 
 namespace App\Controllers;
 
+use App\PDO\CursoPDO;
+
 class CursoController
 {
     public function listar()
     {
+        $cursoPDO = new CursoPDO();
+        $cursos = $cursoPDO->listar();
+
         include('views/cursos/listar.php');
     }
 

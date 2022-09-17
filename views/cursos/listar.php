@@ -2,10 +2,31 @@
     <h3>Lista de Cursos</h3>
 </div>
 
-<ul class="list-group">
-  <li class="list-group-item active" aria-current="true">An active item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
-</ul>
+<table class="table table-bordered">
+  <tr class="bg-light">
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Horário</th>
+    <th>Data Início</th>
+    <th>Data Conclusão</th>
+    <th>Descrição</th>
+    <th>Ativo</th>
+    <th>Ações</th>
+  </tr>
+
+  <?php foreach($cursos as $curso) : ?>
+
+    <tr>
+      <td><?= $curso->getId() ?></td>
+      <td><?= $curso->getNome() ?></td>
+      <td><?= $curso->getHorario() ?></td>
+      <td><?= $curso->getData_inicio() ?></td>
+      <td><?= $curso->getData_conclusao() ?></td>
+      <td><?= $curso->getDescricao() ?></td>
+      <td><?= $curso->getAtivo() ?></td>
+      <td>Editar | Excluir</td>
+    </tr>
+
+  <?php endforeach; ?>
+
+</table>

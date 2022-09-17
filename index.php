@@ -10,13 +10,11 @@ require(__DIR__ . '/vendor/autoload.php');
 
 include_once(__DIR__ . '/views/layout/_header.php');
 
+// $conexao = ConexaoBD::criarConexao();
 
-$conexao = ConexaoBD::criarConexao();
-
-if($conexao) {
-    print "<h3 class='alert alert-success'>Conectou!!!</h3>";
-}
-
+// if($conexao) {
+//     print "<h3 class='alert alert-success'>Conectou!!!</h3>";
+// }
 
 $pagina = isset($_REQUEST['page']) ? $_REQUEST['page'] : 'home';
 
